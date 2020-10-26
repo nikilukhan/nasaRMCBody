@@ -1,0 +1,306 @@
+<?xml version="1.0" ?>
+<robot name="ChadRover">
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.15394492789759548 0.05464426135762334 -0.4176360190004234"/>
+    <mass value="27.2706700946327"/>
+    <inertia ixx="1.3676762545226273" ixy="0.002212382202746055" ixz="0.02108156643522152" iyy="1.507266623541911" iyz="-0.012208215659606059" izz="0.3899478610485203"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel21">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.004745540291309705 1.856982927906075e-05 -5.9474872730093387e-05"/>
+    <mass value="3.4901881701472517"/>
+    <inertia ixx="0.04051725587015198" ixy="-2.38213562437251e-06" ixz="7.638870853748404e-06" iyy="0.02385462653127106" iyz="-2.092604828370906e-06" izz="0.02386196202798007"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.03166 0.00206 0.04892"/>
+    <geometry>
+      <mesh filename="meshes/wheel21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.03166 0.00206 0.04892"/>
+    <geometry>
+      <mesh filename="meshes/wheel21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel31">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.004745566695758041 1.8569829266578547e-05 -5.9548468280823386e-05"/>
+    <mass value="3.4901881701472517"/>
+    <inertia ixx="0.04051725587015209" ixy="-2.382135624394248e-06" ixz="7.638870853865498e-06" iyy="0.023854626531270906" iyz="-2.092604828368358e-06" izz="0.023861962027980077"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.031655 0.00206 0.59892"/>
+    <geometry>
+      <mesh filename="meshes/wheel31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.031655 0.00206 0.59892"/>
+    <geometry>
+      <mesh filename="meshes/wheel31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel41">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.004745566695757986 1.8569829266577246e-05 5.9548468278936006e-05"/>
+    <mass value="3.4901881701472517"/>
+    <inertia ixx="0.040517255870152535" ixy="2.3821356243706668e-06" ixz="7.63887085397652e-06" iyy="0.023854626531270684" iyz="2.0926048283692253e-06" izz="0.02386196202798002"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.348335 0.00206 0.59892"/>
+    <geometry>
+      <mesh filename="meshes/wheel41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.348335 0.00206 0.59892"/>
+    <geometry>
+      <mesh filename="meshes/wheel41.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel11">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.004745540291315353 1.8569829279055546e-05 5.9622063828909666e-05"/>
+    <mass value="3.4901881701472517"/>
+    <inertia ixx="0.040517255870152244" ixy="2.3821356243875803e-06" ixz="7.638870854094482e-06" iyy="0.02385462653127063" iyz="2.0926048283700384e-06" izz="0.02386196202798041"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.34834 0.00206 0.04892"/>
+    <geometry>
+      <mesh filename="meshes/wheel11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.34834 0.00206 0.04892"/>
+    <geometry>
+      <mesh filename="meshes/wheel11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leftArm1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0260495679633544 0.19663582051853512 -0.009510859872505856"/>
+    <mass value="0.5159677138361293"/>
+    <inertia ixx="0.003321253456728346" ixy="0.0004298921823875767" ixz="-1.1131831594186903e-07" iyy="0.00035227947381426435" iyz="-3.6453111983310305e-07" izz="0.0034230725042661073"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.044145 -0.06294 0.106715"/>
+    <geometry>
+      <mesh filename="meshes/leftArm1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.044145 -0.06294 0.106715"/>
+    <geometry>
+      <mesh filename="meshes/leftArm1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rightArm1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.026049567963350728 0.19663582051853623 -0.009510859872501998"/>
+    <mass value="0.5159677138361127"/>
+    <inertia ixx="0.003321253456730955" ixy="-0.0004298921823875784" ixz="1.1131831584125507e-07" iyy="0.00035227947381753777" iyz="-3.6453111996667675e-07" izz="0.0034230725042653926"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.272535 -0.06294 0.106715"/>
+    <geometry>
+      <mesh filename="meshes/rightArm1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.272535 -0.06294 0.106715"/>
+    <geometry>
+      <mesh filename="meshes/rightArm1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="belt1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.059990799114600826 -0.04052854853895527 0.046867625696261184"/>
+    <mass value="8.100755186777747"/>
+    <inertia ixx="0.5300497344087811" ixy="-3.627571362241344e-06" ixz="1.836507445102109e-05" iyy="0.5339737757685868" iyz="-0.0029076632087667864" izz="0.03273842944115046"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.098345 -0.33304 0.308465"/>
+    <geometry>
+      <mesh filename="meshes/belt1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.098345 -0.33304 0.308465"/>
+    <geometry>
+      <mesh filename="meshes/belt1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="wheelJoint2" type="continuous">
+  <origin rpy="0 0 0" xyz="0.03166 -0.00206 -0.04892"/>
+  <parent link="base_link"/>
+  <child link="wheel21"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+<transmission name="wheelJoint2_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheelJoint2">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wheelJoint2_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="wheelJoint3" type="continuous">
+  <origin rpy="0 0 0" xyz="0.031655 -0.00206 -0.59892"/>
+  <parent link="base_link"/>
+  <child link="wheel31"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+<transmission name="wheelJoint3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheelJoint3">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wheelJoint3_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="wheelJoint4" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.348335 -0.00206 -0.59892"/>
+  <parent link="base_link"/>
+  <child link="wheel41"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+<transmission name="wheelJoint4_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheelJoint4">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wheelJoint4_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="wheelJoint1" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.34834 -0.00206 -0.04892"/>
+  <parent link="base_link"/>
+  <child link="wheel11"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+<transmission name="wheelJoint1_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheelJoint1">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wheelJoint1_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="leftArmJoint" type="revolute">
+  <origin rpy="0 0 0" xyz="-0.044145 0.06294 -0.106715"/>
+  <parent link="base_link"/>
+  <child link="leftArm1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+  <limit effort="100" lower="-1.570796" upper="-0.0" velocity="100"/>
+</joint>
+<transmission name="leftArmJoint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="leftArmJoint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="leftArmJoint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="rightArmJoint" type="revolute">
+  <origin rpy="0 0 0" xyz="-0.272535 0.06294 -0.106715"/>
+  <parent link="base_link"/>
+  <child link="rightArm1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+  <limit effort="100" lower="0.0" upper="1.570796" velocity="100"/>
+</joint>
+<transmission name="rightArmJoint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rightArmJoint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rightArmJoint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="beltJoint" type="prismatic">
+  <origin rpy="0 0 0" xyz="-0.0542 0.2701 -0.20175"/>
+  <parent link="leftArm1"/>
+  <child link="belt1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+  <limit effort="100" lower="-0.14" upper="0.15" velocity="100"/>
+</joint>
+<transmission name="beltJoint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="beltJoint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="beltJoint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>
